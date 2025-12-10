@@ -1,0 +1,264 @@
+/* --- VARIÁVEIS & RESET --- */
+:root {
+    --bg-main: #0b1120;       /* Preto/Azul Profundo */
+    --bg-secondary: #1e293b;  /* Cinza Ardosia */
+    --primary: #3b82f6;       /* Azul Royal Vibrante */
+    --primary-dark: #2563eb;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --gradient: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; color: var(--text-main); }
+a { text-decoration: none; transition: 0.3s ease; }
+ul { list-style: none; }
+
+/* --- ANIMAÇÕES --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate { animation: fadeInUp 0.8s ease forwards; opacity: 0; }
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+
+/* --- HEADER --- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 5%;
+    background: rgba(11, 17, 32, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; }
+.logo span { color: var(--primary); }
+
+.nav-menu a {
+    color: var(--text-muted);
+    margin-left: 30px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+.nav-menu a:hover, .nav-menu a.active { color: var(--primary); }
+
+/* --- HERO SECTION --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background: radial-gradient(circle at top center, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+}
+
+.hero-content { max-width: 900px; }
+
+.tagline {
+    display: inline-block;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--primary);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    background: linear-gradient(to right, #fff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-group { display: flex; gap: 15px; justify-content: center; }
+
+.btn {
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.39);
+}
+.btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text-main);
+}
+.btn-secondary:hover { border-color: var(--text-main); background: rgba(255,255,255,0.05); }
+
+/* --- SEÇÕES PADRÃO --- */
+section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
+
+.skills-section { background-color: #0f182a; }
+
+.section-header { margin-bottom: 60px; }
+.section-header h2 { font-size: 2.5rem; margin-bottom: 15px; }
+.section-header p { color: var(--text-muted); font-size: 1.1rem; }
+.divider { width: 60px; height: 4px; background: var(--primary); border-radius: 2px; }
+
+/* --- EXPERIÊNCIA (TIMELINE PRO) --- */
+.timeline { border-left: 2px solid rgba(255,255,255,0.1); padding-left: 40px; }
+
+.job-card {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.job-card::before {
+    content: '';
+    position: absolute;
+    left: -49px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--bg-main);
+    border: 3px solid var(--primary);
+}
+
+.job-header h3 { font-size: 1.5rem; margin-bottom: 5px; }
+.job-header .company { color: var(--primary); font-weight: 600; font-size: 1rem; }
+.job-header .date { font-size: 0.9rem; color: var(--text-muted); margin-left: 10px; }
+
+.job-desc { margin-top: 15px; color: var(--text-muted); }
+.job-desc ul { list-style-type: none; }
+.job-desc li { 
+    position: relative; 
+    padding-left: 20px; 
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+.job-desc li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
+/* --- SKILLS GRID --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.projects-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.skill-category {
+    background: var(--bg-secondary);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s;
+}
+
+.skill-category:hover { border-color: var(--primary); transform: translateY(-5px); }
+
+.skill-category h3 { font-size: 1.25rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+.skill-category i { color: var(--primary); }
+
+.tags { display: flex; flex-wrap: wrap; gap: 10px; }
+.tag {
+    background: rgba(255,255,255,0.05);
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* --- PROJETOS --- */
+.project-card {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s;
+}
+.project-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+
+.project-content { padding: 30px; }
+.project-content h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.project-content p { color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem; }
+
+.tech-stack { margin-bottom: 20px; color: var(--primary); font-size: 0.85rem; font-family: monospace; }
+
+.project-link { 
+    display: inline-flex; align-items: center; gap: 8px; 
+    color: var(--text-main); font-weight: 600;
+}
+.project-link:hover { color: var(--primary); }
+
+/* --- FOOTER --- */
+footer {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 50px 5%;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.social-links { margin-bottom: 20px; }
+.social-links a {
+    display: inline-flex;
+    width: 45px; height: 45px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.05);
+    align-items: center; justify-content: center;
+    margin: 0 8px;
+    color: var(--text-main);
+    transition: 0.3s;
+}
+.social-links a:hover { background: var(--primary); color: white; }
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 3rem; }
+    .nav-menu { display: none; }
+    .timeline { padding-left: 20px; border-left: none; }
+    .job-card::before { display: none; }
+    .job-card { padding-left: 0; border-left: 2px solid var(--primary); padding-left: 20px; }
+}
