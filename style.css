@@ -1,7 +1,7 @@
 /* --- VARIÁVEIS & RESET --- */
 :root {
     --bg-main: #0b1120;       /* Preto/Azul Profundo */
-    --bg-secondary: #1e293b;  /* Cinza Ardosia */
+    --bg-secondary: #1e293b;  /* Cinza Ardosia (Cartões) */
     --primary: #3b82f6;       /* Azul Royal Vibrante */
     --primary-dark: #2563eb;
     --text-main: #f8fafc;
@@ -70,7 +70,7 @@ header {
     justify-content: center;
     text-align: center;
     padding: 0 20px;
-    background: radial-gradient(circle at top center, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle at top center, rgba(59, 130, 246, 0.15) 0%, transparent 60%);
 }
 
 .hero-content { max-width: 900px; }
@@ -132,14 +132,30 @@ header {
 /* --- SEÇÕES PADRÃO --- */
 section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
 
-.skills-section { background-color: #0f182a; }
+/* --- DESTAQUE DA SEÇÃO EXPERTISE (SKILLS) --- */
+.skills-section {
+    /* Fundo especial com Gradiente Radial (Holofote) */
+    background-color: #0f131a; 
+    background-image: radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+    border-top: 1px solid rgba(59, 130, 246, 0.2);
+    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+    /* Força a largura total para o background pegar a tela inteira */
+    max-width: 100% !important; 
+    width: 100%;
+}
+
+/* Ajuste para centralizar o conteúdo dentro da seção de largura total */
+.skills-section > div {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 .section-header { margin-bottom: 60px; }
 .section-header h2 { font-size: 2.5rem; margin-bottom: 15px; }
 .section-header p { color: var(--text-muted); font-size: 1.1rem; }
 .divider { width: 60px; height: 4px; background: var(--primary); border-radius: 2px; }
 
-/* --- EXPERIÊNCIA (TIMELINE PRO) --- */
+/* --- EXPERIÊNCIA (TIMELINE) --- */
 .timeline { border-left: 2px solid rgba(255,255,255,0.1); padding-left: 40px; }
 
 .job-card {
@@ -178,7 +194,7 @@ section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
     color: var(--primary);
 }
 
-/* --- SKILLS GRID --- */
+/* --- SKILLS GRID (CARTÕES) --- */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -190,14 +206,20 @@ section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
 }
 
 .skill-category {
-    background: var(--bg-secondary);
+    background: rgba(30, 41, 59, 0.7); /* Fundo semi-transparente para ver o gradiente atrás */
+    backdrop-filter: blur(5px);
     padding: 30px;
     border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
     transition: 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.skill-category:hover { border-color: var(--primary); transform: translateY(-5px); }
+.skill-category:hover { 
+    border-color: var(--primary); 
+    transform: translateY(-5px); 
+    background: rgba(30, 41, 59, 0.9);
+}
 
 .skill-category h3 { font-size: 1.25rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
 .skill-category i { color: var(--primary); }
@@ -209,7 +231,9 @@ section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
     border-radius: 6px;
     font-size: 0.85rem;
     color: var(--text-muted);
+    border: 1px solid transparent;
 }
+.tag:hover { border-color: rgba(59, 130, 246, 0.5); color: #fff; }
 
 /* --- PROJETOS --- */
 .project-card {
@@ -261,4 +285,5 @@ footer {
     .timeline { padding-left: 20px; border-left: none; }
     .job-card::before { display: none; }
     .job-card { padding-left: 0; border-left: 2px solid var(--primary); padding-left: 20px; }
+    .skills-section { padding: 60px 5%; }
 }
