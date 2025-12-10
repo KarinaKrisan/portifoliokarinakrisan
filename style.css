@@ -210,6 +210,13 @@ header {
 .about-info p { margin-bottom: 1.2rem; color: var(--text-muted); text-align: justify; }
 .highlight-text { color: var(--text-main); border-left: 3px solid var(--primary); padding-left: 1rem; }
 
+/* Sidebar dentro do About */
+.about-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Espaço entre tech stack e idiomas */
+}
+
 .stack-item {
     display: flex;
     align-items: center;
@@ -219,6 +226,30 @@ header {
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 .stack-item i { color: var(--primary); width: 35px; text-align: center; }
+
+/* Box de Idiomas */
+.languages-box h3 {
+    font-size: 1.1rem;
+    color: var(--text-main);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.languages-box h3 i { color: var(--primary); }
+
+.lang-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+.lang-name { font-weight: 600; }
+.lang-level { font-size: 0.85rem; color: var(--primary); font-family: monospace; }
+
 
 /* Timeline */
 #experience { padding: 5rem 0; }
@@ -269,12 +300,12 @@ header {
 .sub-highlight { font-size: 0.9rem; color: var(--primary); margin-bottom: 0.8rem; }
 .education-card .desc { color: var(--text-muted); font-size: 0.9rem; }
 
-/* --- SEÇÃO DE CERTIFICADOS --- */
+/* Certificates Grid */
 #certificates { padding: 5rem 0; }
 
 .cert-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid Responsivo */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1.5rem;
 }
 
@@ -324,16 +355,6 @@ header {
     margin-bottom: 0.5rem;
 }
 
-.cred-id {
-    font-size: 0.7rem;
-    color: #666;
-    font-family: monospace;
-    display: block;
-    margin-top: auto; /* Empurra para o final do card */
-    word-break: break-all;
-}
-
-
 /* Footer */
 footer { padding: 4rem 0 2rem; text-align: center; }
 .contact-panel { max-width: 600px; margin: 0 auto 3rem; text-align: center; }
@@ -354,5 +375,5 @@ footer { padding: 4rem 0 2rem; text-align: center; }
     .marker { left: -1.85rem; }
     .hero-actions { display: flex; flex-direction: column; gap: 1rem; }
     .btn-glass { margin-left: 0; }
-    .cert-grid { grid-template-columns: 1fr; } /* Um certificado por linha no mobile */
+    .cert-grid { grid-template-columns: 1fr; }
 }
