@@ -130,25 +130,21 @@ header {
 .btn-secondary:hover { border-color: var(--text-main); background: rgba(255,255,255,0.05); }
 
 /* --- SEÇÕES PADRÃO --- */
-section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
-
-/* --- DESTAQUE DA SEÇÃO EXPERTISE (SKILLS) --- */
-.skills-section {
-    /* Fundo especial com Gradiente Radial (Holofote) */
-    background-color: #0f131a; 
-    background-image: radial-gradient(circle at center, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
-    border-top: 1px solid rgba(59, 130, 246, 0.2);
-    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
-    /* Força a largura total para o background pegar a tela inteira */
-    max-width: 100% !important; 
-    width: 100%;
-}
-
-/* Ajuste para centralizar o conteúdo dentro da seção de largura total */
-.skills-section > div {
+/* Adicionei o padding e max-width de volta para todas as seções */
+section {
+    padding: 100px 5%;
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/* --- DESTAQUE DA SEÇÃO EXPERTISE (SKILLS) - CORRIGIDO --- */
+/* Removi o fundo e as bordas que estavam causando o problema */
+.skills-section {
+    /* Nenhuma propriedade especial aqui. Ela vai herdar o padrão da tag <section> */
+}
+
+/* Removi a regra que forçava o alinhamento, pois a tag <section> já cuida disso */
+/* .skills-section > div { max-width: 1200px; margin: 0 auto; } */
 
 .section-header { margin-bottom: 60px; }
 .section-header h2 { font-size: 2.5rem; margin-bottom: 15px; }
@@ -285,5 +281,5 @@ footer {
     .timeline { padding-left: 20px; border-left: none; }
     .job-card::before { display: none; }
     .job-card { padding-left: 0; border-left: 2px solid var(--primary); padding-left: 20px; }
-    .skills-section { padding: 60px 5%; }
+    /* Removi o padding específico da skills-section no mobile, pois agora ela usa o padrão */
 }
