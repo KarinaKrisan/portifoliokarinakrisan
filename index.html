@@ -3,161 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de Karina Krisan - Especialista em Cibersegurança e Governança de Dados">
-    <title>Karina Krisan | Cibersegurança & Infraestrutura</title>
-    
+    <title>Karina Krisan | Cybersec & Infra</title>
     <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+    <div class="bg-glow top-left"></div>
+    <div class="bg-glow bottom-right"></div>
+
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">K.Krisan<span class="dot">.</span></a>
+            <a href="#" class="logo">&lt;K.Krisan /&gt;</a>
             <nav class="nav-links">
-                <a href="#about">Sobre</a>
-                <a href="#experience">Trajetória</a>
-                <a href="#education">Formação</a>
+                <a href="#about">01. Sobre</a>
+                <a href="#experience">02. Trajetória</a>
+                <a href="#education">03. Formação</a>
                 <a href="#contact" class="btn-nav">Contato</a>
             </nav>
         </div>
     </header>
 
     <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content fade-in-up">
-            <span class="badge-hero">Infraestrutura & Segurança</span>
-            <h1>Karina Krisan</h1>
-            <p class="subtitle">Bacharel em Ciência da Computação | Pós-Graduada em Cibersegurança e Governança de Dados</p>
-            <p class="hero-text">Transformando infraestruturas complexas em ambientes seguros, estáveis e de alta performance.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Entrar em Contato</a>
-                <a href="https://www.linkedin.com/in/karinakrisan/" target="_blank" class="btn btn-outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <div class="container hero-container">
+            <div class="hero-text fade-in">
+                <span class="status-badge"><span class="pulse"></span>Disponível para Projetos</span>
+                <h1>Karina Krisan</h1>
+                <h2 class="glitch-effect">Cybersecurity & Data Governance</h2>
+                <p>Especialista em blindar infraestruturas críticas. Transformo operações de TI em ambientes resilientes, monitorados e seguros.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Iniciar Conexão</a>
+                    <a href="https://www.linkedin.com/in/karinakrisan/" target="_blank" class="btn btn-glass"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="about">
         <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
-            <div class="about-grid">
-                <div class="about-card">
-                    <h3>Perfil Profissional</h3>
-                    <p>Profissional de TI com trajetória sólida em suporte (NOC, Data Center, Service Desk), desenvolvendo visão sistêmica em monitoramento e continuidade operacional.</p>
-                    <p>Minha atuação combina capacidade analítica para resolução de incidentes críticos com a visão estratégica de Governança de Dados. Foco em segurança, estabilidade e otimização de processos.</p>
+            <h2 class="section-title">Perfil Técnico</h2>
+            <div class="glass-panel about-grid">
+                <div class="about-info">
+                    <p>Atuando na linha de frente da tecnologia, combino a agilidade necessária para o <strong>NOC</strong> com a precisão exigida pela <strong>Governança de Dados</strong>.</p>
+                    <p>Minha abordagem não é apenas corrigir problemas, mas antecipar falhas através de monitoramento inteligente (Zabbix/Grafana) e hardening de infraestrutura.</p>
                 </div>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <i class="fas fa-shield-alt"></i>
-                        <h4>Segurança</h4>
-                        <p>Mitigação & Firewall</p>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-server"></i>
-                        <h4>Infra</h4>
-                        <p>Alta Disponibilidade</p>
-                    </div>
-                    <div class="stat-item">
-                        <i class="fas fa-chart-line"></i>
-                        <h4>NOC</h4>
-                        <p>Monitoramento 24/7</p>
-                    </div>
+                <div class="tech-stack">
+                    <div class="stack-item"><i class="fas fa-network-wired"></i> <span>Mikrotik & Cisco</span></div>
+                    <div class="stack-item"><i class="fas fa-shield-virus"></i> <span>SonicWall & Firewall</span></div>
+                    <div class="stack-item"><i class="fas fa-chart-area"></i> <span>Zabbix & Monitoring</span></div>
+                    <div class="stack-item"><i class="fas fa-database"></i> <span>Data Governance</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="bg-light">
+    <section id="experience">
         <div class="container">
-            <h2 class="section-title">Experiência Profissional</h2>
+            <h2 class="section-title">Timeline Operacional</h2>
             <div class="timeline">
                 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="job-card">
-                        <div class="job-header">
-                            <div>
-                                <h3>Analista NOC N1</h3>
-                                <span class="company">SITELBRA</span>
-                            </div>
-                            <span class="date">Ago 2024 - Presente</span>
+                <div class="timeline-block">
+                    <div class="marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="job-head">
+                            <h3>Analista NOC N1</h3>
+                            <span class="time-badge">Atual</span>
                         </div>
-                        <p class="job-summary">Suporte crítico a grandes operadoras (Oi, Cirion, Telmex, Vivo, Claro). Foco em alta disponibilidade e SLA.</p>
-                        <ul class="job-details">
-                            <li>Mitigação de incidentes, perda de pacotes e ajustes de MTU/MRU.</li>
-                            <li>Configuração de equipamentos Mikrotik, DATACOM, EoIP e L2TP.</li>
-                            <li>Gestão de tickets e monitoramento proativo.</li>
-                        </ul>
-                        <div class="tags-container">
-                            <span class="tag">Zabbix</span>
-                            <span class="tag">Mikrotik</span>
-                            <span class="tag">DATACOM</span>
-                            <span class="tag">Jira</span>
-                            <span class="tag">IPAM</span>
+                        <h4 class="company">SITELBRA</h4>
+                        <p>Gestão de incidentes críticos para grandes players (Vivo, Claro, Oi). Foco total em uptime e mitigação de ataques.</p>
+                        <div class="tags">
+                            <span>BGP/Routing</span><span>Zabbix</span><span>Troubleshooting</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="job-card">
-                        <div class="job-header">
-                            <div>
-                                <h3>Operadora de Data Center</h3>
-                                <span class="company">UNINOVE</span>
-                            </div>
-                            <span class="date">Jul 2022 - Ago 2024</span>
+                <div class="timeline-block">
+                    <div class="marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="job-head">
+                            <h3>Operadora de Data Center</h3>
+                            <span class="time-badge">2022 - 2024</span>
                         </div>
-                        <p class="job-summary">Monitoramento de ambientes críticos e gestão de infraestrutura de servidores e redes.</p>
-                        <ul class="job-details">
-                            <li>Administração de AD, FileServer, Microsoft 365 e Exchange.</li>
-                            <li>Controle de acesso via SonicOS API e gestão de firewall SonicWall.</li>
-                            <li>Infraestrutura de rede: Dell, Cisco, Ruckus e VPNs.</li>
-                        </ul>
-                        <div class="tags-container">
-                            <span class="tag">Data Center</span>
-                            <span class="tag">SonicWall</span>
-                            <span class="tag">Cisco</span>
-                            <span class="tag">Grafana</span>
-                            <span class="tag">Active Directory</span>
+                        <h4 class="company">UNINOVE</h4>
+                        <p>Guardiã da infraestrutura física e lógica. Administração de servidores, AD e virtualização em ambiente de alta densidade.</p>
+                        <div class="tags">
+                            <span>Data Center</span><span>Windows Server</span><span>SonicWall</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="job-card">
-                        <div class="job-header">
-                            <div>
-                                <h3>Auxiliar de Service Desk</h3>
-                                <span class="company">UNINOVE (Medicina)</span>
-                            </div>
-                            <span class="date">Fev 2022 - Jul 2022</span>
+                <div class="timeline-block">
+                    <div class="marker"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="job-head">
+                            <h3>Service Desk (N1/N2/N3)</h3>
+                            <span class="time-badge">2021 - 2022</span>
                         </div>
-                        <p class="job-summary">Atendimento N1/N2/N3 em ambiente acadêmico de alta exigência.</p>
-                        <div class="tags-container">
-                            <span class="tag">Service Desk</span>
-                            <span class="tag">GLPI</span>
-                            <span class="tag">NDDPrint</span>
-                            <span class="tag">Hardware</span>
+                        <h4 class="company">UNINOVE (Medicina)</h4>
+                        <p>Suporte avançado para áreas críticas da saúde e acadêmica. Resolução rápida para garantir continuidade operacional.</p>
+                        <div class="tags">
+                            <span>Service Desk</span><span>GLPI</span><span>Hardware</span>
                         </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="job-card">
-                        <div class="job-header">
-                            <div>
-                                <h3>Auxiliar de Service Desk Trainee</h3>
-                                <span class="company">UNINOVE</span>
-                            </div>
-                            <span class="date">Jul 2021 - Fev 2022</span>
-                        </div>
-                        <p class="job-summary">Suporte técnico ágil e apoio em eventos institucionais (MEC).</p>
                     </div>
                 </div>
 
@@ -167,36 +116,39 @@
 
     <section id="education">
         <div class="container">
-            <h2 class="section-title">Formação Acadêmica</h2>
-            <div class="education-grid">
-                <div class="edu-card">
-                    <div class="icon-box"><i class="fas fa-user-graduate"></i></div>
+            <h2 class="section-title">Backbone Acadêmico</h2>
+            <div class="grid-2">
+                <div class="glass-card education-card">
+                    <i class="fas fa-user-shield edu-icon"></i>
                     <h3>Pós-Graduação</h3>
-                    <p class="course">Cibersegurança e Governança de Dados</p>
-                    <p class="desc">Especialização em proteção de dados, compliance (LGPD) e estratégias de segurança da informação.</p>
+                    <p class="highlight">Cibersegurança e Governança de Dados</p>
+                    <p class="desc">Especialização focada em LGPD, Compliance e Defesa Cibernética.</p>
                 </div>
-                <div class="edu-card">
-                    <div class="icon-box"><i class="fas fa-university"></i></div>
+                <div class="glass-card education-card">
+                    <i class="fas fa-code-branch edu-icon"></i>
                     <h3>Bacharelado</h3>
-                    <p class="course">Ciência da Computação</p>
-                    <p class="desc">Base sólida em lógica, desenvolvimento de software e infraestrutura computacional.</p>
+                    <p class="highlight">Ciência da Computação</p>
+                    <p class="desc">Fundamentação em algoritmos, redes de computadores e desenvolvimento.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <footer id="contact">
-        <div class="container footer-content">
-            <div class="footer-cta">
-                <h2>Pronta para novos desafios</h2>
-                <p>Vamos conversar sobre como posso agregar valor à sua equipe de tecnologia.</p>
-                <a href="mailto:contatokarinakrisan@gmail.com" class="btn btn-light">Enviar E-mail</a>
+        <div class="container">
+            <div class="glass-panel contact-panel">
+                <h2>Inicializar Protocolo de Contato</h2>
+                <p>Estou pronta para elevar o nível de segurança e operação da sua empresa.</p>
+                <div class="contact-links">
+                    <a href="mailto:contatokarinakrisan@gmail.com" class="contact-btn">
+                        <i class="fas fa-envelope"></i> contatokarinakrisan@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/karinakrisan/" target="_blank" class="contact-btn">
+                        <i class="fab fa-linkedin"></i> /karinakrisan
+                    </a>
+                </div>
             </div>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/karinakrisan/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="mailto:contatokarinakrisan@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-            </div>
-            <p class="copyright">&copy; 2025 Karina Krisan. Developed for excellence.</p>
+            <p class="footer-note">System Status: Online | &copy; 2025 Karina Krisan</p>
         </div>
     </footer>
 
